@@ -1,0 +1,255 @@
+body {
+  font-family: var(--font-primary);
+}
+.hfeed {
+  overflow: hidden;
+}
+
+section {
+  padding: 40px 0;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  @include laptop {
+    padding: 80px 0;
+  }
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 16px;
+
+  @include mobile {
+    max-width: 480px;
+  }
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 20px;
+  }
+
+  @include laptop {
+    max-width: 1250px;
+    padding: 0 15px;
+  }
+
+  // @include desktop {
+  //   max-width: 1920px;
+  // }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.title {
+  font-weight: 800;
+  font-size: 26px;
+  line-height: 125%;
+  color: var(--white);
+  margin-bottom: 24px;
+
+  @include tablet {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  @include laptop {
+    font-size: 40px;
+  }
+}
+
+.text-16-18-20 {
+  font-size: 16px;
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include laptop {
+    font-size: 20px;
+  }
+}
+
+.text-20-22-24 {
+  font-size: 20px;
+
+  @include tablet {
+    font-size: 22px;
+  }
+
+  @include laptop {
+    font-size: 24px;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(52deg, #9a4dff 0%, #ffb277 92.6%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.accent-card {
+  border: 1px solid transparent;
+  background-image: linear-gradient(#180b41, #180b41),
+    linear-gradient(103deg, #432acd 3%, #9a4dff 38%, #ffb277 83%, #c364f6 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+}
+
+/*-------------- post page -------------*/
+
+.post-page {
+  ul {
+    padding-left: 20px;
+    list-style: disc;
+  }
+
+  ol {
+    padding-left: 20px;
+    list-style: decimal;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin-block: 1em;
+    line-height: 1.2;
+    font-weight: bold;
+  }
+
+  p {
+    margin-block: 1em;
+    line-height: 1.6;
+  }
+
+  ul,
+  ol {
+    margin-block: 1em;
+  }
+
+  li {
+    margin-bottom: 0.5em;
+  }
+
+  dl {
+    margin-block: 1em;
+  }
+
+  dd {
+    margin-left: 20px;
+  }
+
+  /* Заголовки блогу */
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  h2 {
+    font-size: 2rem;
+    margin-bottom: 0.75em;
+  }
+
+  h3 {
+    font-size: 1.75rem;
+    margin-bottom: 0.75em;
+  }
+
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5em;
+  }
+
+  blockquote {
+    margin-block: 1.5em;
+    padding: 1em;
+    border-left: 4px solid #ccc;
+    background-color: #f9f9f9;
+    font-style: italic;
+  }
+
+  a {
+    text-decoration: underline;
+    transition: var(--transition-opacity);
+    opacity: 1;
+  }
+
+  a:hover {
+    opacity: 0.8;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-block: 1.5em;
+  }
+
+  th,
+  td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  img {
+    border-radius: 12px;
+  }
+
+  .post-page-title {
+    margin-block: 0;
+  }
+
+  .post-page-content {
+    margin-top: 2.5em;
+  }
+
+  b,
+  strong {
+    font-weight: 700;
+  }
+}
+
+.alignright {
+  float: right;
+  margin: 0 0 1em 2em;
+}
+
+.alignleft {
+  float: left;
+  margin: 0 2em 1em 0;
+}
+
+.aligncenter {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 1em;
+}

@@ -1,0 +1,24 @@
+{
+  "liveSassCompile.settings.includeItems": ["**/scss/**/*.scss"],
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    "**/wp-content/plugins/**",
+    "**/wp-admin/**",
+    "**/wp-content/uploads/**",
+    ".vscode/**",
+    ".git/**"
+  ],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css"
+    }
+    // {
+    //   "format": "compressed",
+    //   "extensionName": ".min.css",
+    //
+    // }
+  ],
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"]
+}

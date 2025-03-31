@@ -1,0 +1,15 @@
+:root {
+  --font-primary: 'Nunito Sans', 'Segoe UI', 'Roboto', 'Helvetica Neue',
+    sans-serif;
+  --color-dark: #0f0029;
+  --white: #fff;
+  --color-2-transparent: rgba(38, 27, 102, 0.4);
+  --color-1: #bd77ff;
+
+  --transition-color: color 300ms ease;
+  --transition-bg: background-color 300ms ease;
+  --transition-shadow: box-shadow 300ms ease;
+  --transition-opacity: opacity 300ms ease;
+  --transition-visibility: visibility 300ms ease;
+  --cubic: ease;
+}

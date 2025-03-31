@@ -1,0 +1,31 @@
+.btn {
+  position: relative;
+  padding: 8px 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 56px;
+  border-radius: 100px;
+  min-width: 234px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 130%;
+  text-align: center;
+  color: #fff;
+
+  border: 1px solid transparent;
+  background-image: radial-gradient(
+      100% 140% at 100% 40%,
+      #9839ea 0%,
+      #281584 100%
+    ),
+    linear-gradient(103deg, #432acd 3%, #9a4dff 38%, #ffb277 83%, #c364f6 100%);
+  background-origin: border-box;
+  background-clip: padding-box, border-box;
+  transition: var(--transition-opacity);
+
+  @include hover {
+    opacity: 0.8;
+  }
+}

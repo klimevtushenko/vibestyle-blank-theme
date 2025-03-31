@@ -1,0 +1,73 @@
+.is-menu-open {
+  overflow: hidden;
+}
+
+.menu-btn {
+  position: relative;
+  z-index: 100;
+  padding: 6px;
+  width: 32px;
+  height: 32px;
+
+  background-color: blueviolet;
+  color: white;
+  border-radius: 100%;
+
+  @include laptop {
+    display: none;
+  }
+
+  @media (pointer: fine) {
+    cursor: pointer;
+  }
+}
+
+.menu-burger {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s var(--cubic);
+}
+.menu-cross {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  transition: all 0.3s var(--cubic);
+  transform: scale(0);
+}
+
+.burger-active .menu-burger {
+  transform: scale(0);
+  z-index: -1;
+}
+.burger-active .menu-cross {
+  transform: scale(1);
+  z-index: 100;
+}
+
+.header-menu-wrapper.menu-open {
+  opacity: 1;
+  transform: translateY(-4%);
+}
+
+.backdrop {
+  position: absolute;
+
+  z-index: -1;
+  inset: 0;
+  background-color: white;
+  opacity: 0;
+  transition: all 0.3s var(--cubic);
+}
+
+.is-menu-open .backdrop {
+  position: absolute;
+
+  z-index: 98;
+  inset: 0;
+  background-color: white;
+  opacity: 0.5;
+  backdrop-filter: blur(5px);
+}
