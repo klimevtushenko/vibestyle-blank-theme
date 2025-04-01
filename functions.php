@@ -1,9 +1,9 @@
 <?php
 
-add_action('after_setup_theme', 'blankslate_setup');
-function blankslate_setup()
+add_action('after_setup_theme', 'purevibestyle_setup');
+function purevibestyle_setup()
 {
-    load_theme_textdomain('blankslate', get_template_directory() . '/languages');
+    load_theme_textdomain('purevibestyle', get_template_directory() . '/languages');
     add_theme_support('title-tag');
     add_theme_support('post-thumbnails');
     add_theme_support('responsive-embeds');
@@ -15,18 +15,18 @@ function blankslate_setup()
     if (!isset($content_width)) {
         $content_width = 1920;
     }
-    register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'blankslate')));
+    register_nav_menus(array('main-menu' => esc_html__('Main Menu', 'purevibestyle')));
 }
 
-add_action('wp_body_open', 'blankslate_skip_link', 5);
-function blankslate_skip_link()
+add_action('wp_body_open', 'purevibestyle_skip_link', 5);
+function purevibestyle_skip_link()
 {
-    echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__('Skip to the content', 'blankslate') . '</a>';
+    echo '<a href="#content" class="skip-link screen-reader-text">' . esc_html__('Skip to the content', 'purevibestyle') . '</a>';
 }
 
 add_filter('big_image_size_threshold', '__return_false');
-add_filter('intermediate_image_sizes_advanced', 'blankslate_image_insert_override');
-function blankslate_image_insert_override($sizes)
+add_filter('intermediate_image_sizes_advanced', 'purevibestyle_image_insert_override');
+function purevibestyle_image_insert_override($sizes)
 {
     unset($sizes['medium_large']);
     unset($sizes['1536x1536']);
@@ -34,15 +34,6 @@ function blankslate_image_insert_override($sizes)
     return $sizes;
 }
 
-
-function disable_theme_update($value)
-{
-    if (isset($value) && is_object($value)) {
-        unset($value->response['blankslate']);
-    }
-    return $value;
-}
-add_filter('site_transient_update_themes', 'disable_theme_update');
 
 // дозволяє завантажувати svg до адмінки вордпрес
 function allow_svg_upload($mimes)
@@ -53,16 +44,12 @@ function allow_svg_upload($mimes)
 add_filter('upload_mimes', 'allow_svg_upload');
 
 
-
-
 function remove_wp_block_library_css()
 {
     wp_dequeue_style('wp-block-library');
     wp_dequeue_style('wp-block-library-theme');
 }
 add_action('wp_enqueue_scripts', 'remove_wp_block_library_css', 100);
-
-
 
 //disable jquery migrate
 function disable_jquery_migrate($scripts)

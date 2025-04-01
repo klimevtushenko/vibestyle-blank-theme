@@ -37,7 +37,7 @@
 }
 
 @mixin bg($image-name, $size: cover, $position: center, $repeat: no-repeat) {
-  background-image: url('/wp-content/themes/blankslate/img/#{$image-name}');
+  background-image: url('/wp-content/themes/purevibestyle/img/#{$image-name}');
   background-size: $size;
   background-position: $position;
   background-repeat: $repeat;
