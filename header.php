@@ -5,12 +5,6 @@
   <meta charset="<?php bloginfo('charset'); ?>">
   <meta name="viewport" content="width=device-width">
 
-  <?php wp_head(); ?>
-  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
-
-
-
-
   <style>
     *,
     *::before,
@@ -34,16 +28,16 @@
     }
   </style>
 
+  <?php wp_head(); ?>
+  <link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico" type="image/x-icon">
 
 </head>
 
 <body <?php body_class(); ?>>
   <div class="backdrop"></div>
   <?php wp_body_open(); ?>
-  <div id="wrapper" class="hfeed">
+  <div id="wrapper" class="page-wrap">
 
     <?php get_template_part('partials/components/header/header') ?>
 
-
-    <div id="container">
-      <main id="content" role="main">
+    <main role="main">

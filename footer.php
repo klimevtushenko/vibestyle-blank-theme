@@ -1,12 +1,11 @@
 </main>
 
-</div>
 <?php get_template_part("partials/components/footer/footer"); ?>
 
-</div>
+</div><!-- page-wrap -->
+
 <?php wp_footer(); ?>
+
 </body>
-
-
 
 </html>
